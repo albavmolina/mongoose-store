@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ouid List</title>
+  </head>
+
+  <body>
+    <nav>
+      <a href="/weeds">Back to Ouid Index</a>
+     
+    </nav>
+    
+    <h1>Edit Ouid List </h1>
+    <form action="/weeds/<%=weed._id%>?_method=PUT" method="POST">
+       <!-- NOTE: the form is pre-populated with values for the server -->
+      Name: <input type="text" name="name" value="<%=weed.name %>" /><br />
+      Description: <input type="text" name="description" value="<%= weed.description%>"/><br />
+      Img <input type="text" name="img" value="<%= weed.img%>"/><br />
+      Price <input type="text" name="price" value="<%= weed.price%>"/><br />
+      <input type="submit" value="Submit Changes" />
+    </form>
+   
+  </body>
+</html>

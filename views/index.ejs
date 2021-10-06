@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Here's your Ouid List</title>
+</head>
+<body>
+    <h1>Ouidly.io</h1>
+
+    <h3>Here's your Ouid List</h3>
+    <nav>
+        <a href="/weeds/new">Add A New Ouid Item</a>
+    </nav>
+    <ul style="list-style: lower-roman;">
+        <% weeds.forEach(weed => { %>
+            <li style="margin-bottom: 1rem;">
+                <form method="POST" action="/weeds/<%= weed._id %>?_method=DELETE" style="display: inline; margin-right: 1rem;">
+                    <input type="submit" value="DELETE">
+                </form>
+
+                <img src= "<%= weed.img %>">
+            
+              
+                <a href="/weeds/<%= weed._id %>">
+                 <%= weed.name %>
+                </a>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

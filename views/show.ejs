@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Ouid Details </title>
+  </head>
+  <body>
+
+    <nav>
+      <a href="/weeds">Back to Ouid Index</a>
+     
+  
+    <nav>
+      <a href="/weeds/<%= weed._id%>/edit">Edit Ouid </a>
+  </nav> 
+    <h1> Name: <%=weed.name %></h1>
+    <p> <%= weed.description%> </p>
+   
+    <img src= "<%= weed.img %>">
+    <h5> Price: <%=weed.price %></h5><br />
+    <input type="submit" name="" value="🛒 Oui Oui to Ouid 🛒" />
+  
+  </body>
+</html>
